@@ -27,7 +27,7 @@ function App() {
       return;
     }
     const newContactItem = { id: nanoid(), name, number };
-    setContacts([newContactItem, ...contacts]);
+    setContacts(contacts => [newContactItem, ...contacts]);
   };
 
   const changeFilter = event => {
